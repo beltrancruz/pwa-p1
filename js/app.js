@@ -1,7 +1,12 @@
-console.log("Hola mundo");
+let url = window.location.href;
+let swDirectory = "/pwa-p1/sw.js"
+
 if(navigator.serviceWorker){
     console.log("ok");
-    navigator.serviceWorker.register('/sw.js');
+    if(url.includes('localhost')){
+        swDirectory = '/sw.js'
+    }
+    navigator.serviceWorker.register(swDirectory);
     
 }else{
     console.log("not ok");

@@ -13,7 +13,7 @@ self.addEventListener('fetch', (event)=>{
         console.log(event.request.url);
         console.log("Es una imagen");
 
-        let newResp = fetch('/img/sheep.png');
+        let newResp = fetch('./img/sheep.png');
         event.respondWith(newResp);
     }
 
@@ -21,7 +21,7 @@ self.addEventListener('fetch', (event)=>{
         console.log(event.request.url);
         console.log("Es una imagen");
 
-        let newResp = fetch('/img/sheep.png');
+        let newResp = fetch('./img/sheep.png');
         event.respondWith(newResp);
     }
 

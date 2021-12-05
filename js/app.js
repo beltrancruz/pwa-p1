@@ -15,10 +15,12 @@ if(navigator.serviceWorker){
 function doSomething(){
     fetch('https://www.google.com/logos/doodles/2021/googles-23rd-birthday-6753651837109087.2-ladc.gif').then((response) => {
       //var imageURL = window.URL.createObjectURL(response);
-
+      console.log(response);
+      let imageURL = response.url
+      /*
       var binaryData = [];
       binaryData.push(response);
-      var imageURL = window.URL.createObjectURL(new Blob(binaryData, {type: "application/zip"}))
+      var imageURL = window.URL.createObjectURL(new Blob(binaryData, {type: "application/zip"}))*/
 
       document.getElementById("res").src = imageURL;
     }, (Error) => {
